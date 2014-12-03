@@ -4,6 +4,7 @@ var express = require('express'),
 	util = require('util');
 
 // global list of users
+
 var users = [];
 var senders = {};
 var loaders = {};
