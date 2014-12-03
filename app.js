@@ -8,7 +8,7 @@ var express = require('express'),
 var users = [];
 var senders = {};
 var loaders = {};
-var port = process.env.NODE_ENV === 'production' ? 80 : 4000;
+var port = process.env.NODE_ENV === 'production' ? process.env.PORT : 4000;
 
 
 // configure web server
