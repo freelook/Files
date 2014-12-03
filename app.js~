@@ -7,7 +7,6 @@ var express = require('express'),
 var users = [];
 var senders = {};
 var loaders = {};
-var port = NODE_ENV === 'production' ? 80 : 4000;
 
 
 // configure web server
@@ -29,7 +28,7 @@ app.configure(function() {
 // start the web server
 var server = require('http').createServer(app)
 	, io = require('socket.io').listen(server);
-server.listen(port);
+server.listen(4000);
 
 
 // routes
