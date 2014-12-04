@@ -1,5 +1,6 @@
 $(function() {
 	var formData;
+	var host = window.location.origin;
 	var showInfo = function(message) {
 		$('div.progress').hide();
 		$('strong.message').text(message);
@@ -13,7 +14,7 @@ $(function() {
 		var file = document.getElementById('attachment').files[0];
 		if(file){
 		formData.append('attachment', file);
-		var path = 'http://localhost:4000/file?data=' + socket.id;
+		var path = host + '/file?data=' + socket.id;
 		sendMessage('Ссылка на <a href="' + path + '" target="_blank">файл</a>');
 		} else {
 			sendMessage($('#msg').val());

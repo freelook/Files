@@ -1,4 +1,4 @@
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect(window.location.origin);
 var user;
 
 // chat message received
